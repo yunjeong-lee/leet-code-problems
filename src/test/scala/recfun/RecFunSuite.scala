@@ -33,5 +33,11 @@ class RecFunSuite {
 }
 */
 
+  // ------ generateParenthesis tests -------------------------------------------------
+  /*@Test def `generate parenthesis test`: Unit = {
+
+    // To run after debugging
+    assert(generateParenthesis(3) == List("((()))","(()())","(())()","()(())","()()()"))
+  }*/
 
 }

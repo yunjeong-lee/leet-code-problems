@@ -4,7 +4,7 @@ import org.junit.Test
 
 class PermuteFunTests extends PermuteFun {
 
-  // ------ 14. permute tests -------------------------------------------------
+  // ------ permute tests -------------------------------------------------
 
   // To run the test after fixing type mismatch problem
   /*@Test def `permute test`: Unit = {
@@ -13,7 +13,7 @@ class PermuteFunTests extends PermuteFun {
     assert(permute_res == arr.permutations)
   }*/
 
-  // ------ 15. permute II tests -------------------------------------------------
+  // ------ permute II tests -------------------------------------------------
 
   @Test def `next permutations test`: Unit = {
 

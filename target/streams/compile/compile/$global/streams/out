@@ -1,5 +1,18 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/recfun/src/main/scala/recfun/RecFun.scala:202:7: method lengthOfLongestSubstring is defined twice;[0m
-[0m[[0m[31merror[0m] [0m[0m  the conflicting method lengthOfLongestSubstring was defined at line 173:7[0m
-[0m[[0m[31merror[0m] [0m[0m  def lengthOfLongestSubstring(s: String): Int = {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/main/scala/recfun/PermuteFun.scala:41:30: value add is not a member of List[List[Int]][0m
+[0m[[0m[31merror[0m] [0m[0m      if (first == n) output.add(new ArrayList[Integer](nums))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/main/scala/recfun/PermuteFun.scala:54:3: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: List[List[Int]][0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/main/scala/recfun/PermuteFun.scala:37:5: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m    output[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/main/scala/recfun/RecFun.scala:153:20: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: List[String][0m
+[0m[[0m[31merror[0m] [0m[0m    ParenthesisIter(ans, res, 0, 0, n)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

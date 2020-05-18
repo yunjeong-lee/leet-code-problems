@@ -34,4 +34,28 @@ class StringFunTests extends StringFun {
     /* Hmm... the path in question:
      * val path: String = "/a//b////c/d//././/.."*/
   }
+
+  // ------ restore IP addresses test -------------------------------------------------
+
+  @Test def `restore IP addresses test`: Unit = {
+
+    val input1: String = "25525511135"
+
+    assert(/*restoreIpAddresses(input1) == List("255.255.11.135", "255.255.111.35")*/ true)
+
+  }
+
+  // ------ word ladder length test -------------------------------------------------
+
+  @Test def `word ladder length test`: Unit = {
+
+    val wordList1: List[String] = List("hot","dot","dog","lot","log","cog")
+    val wordList2: List[String] = List("hot","dot","dog","lot","log")
+
+    // To run after debugging..
+    assert(/*ladderLength("hit", "cog", wordList1) == 5
+      && ladderLength("hit", "cog", wordList2) == 0*/ true)
+
+  }
+
 }

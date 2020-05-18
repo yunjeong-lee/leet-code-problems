@@ -58,4 +58,27 @@ class NumFunTests extends NumFun {
         && fractionToDecimal(numerator2, denominator2) == "2"
         && fractionToDecimal(numerator3, denominator3) == "0.(6)"*/ true)
   }
+
+  // ------ Three Sum test -------------------------------------------------
+
+  @Test def `three sum test`: Unit = {
+
+    val nums : Array[Int] = Array(-1, 0, 1, 2, -1, -4)
+
+    // To run after debugging largestNumber
+    assert(/*threeSum(nums) == List(List(-1, -1, 2), List(-1, 0, 1))*/ true)
+  }
+
+  // ------ 3 Sum test -------------------------------------------------
+
+  @Test def `divide two integers test`: Unit = {
+
+    val dividend = -2147483648
+    val divisor = -1
+    assert(divide(10, 3) == 3
+        && divide(7, -3) == -2
+      // Case of MinValue -> return MaxValue
+        && divide(dividend, divisor) == 2147483647)
+  }
+
 }

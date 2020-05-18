@@ -7,8 +7,7 @@ class LinkedListFunTests extends LinkedListFun {
   // ------ addTwoNumbers tests -----------------------------------------------------
 
   // addTwoNumbers is defined correctly, but testing is incomplete
-  // something wrong with the code below...
-  // when the list exceeds length 3, it does not correctly make node
+  // Currently experimenting with make_node below (when the length >= 3, it does not correctly make node)
   def make_node (ls: List[Int]): ListNode = {
     val curr_node: ListNode = new ListNode()
     var next_node: ListNode = new ListNode()

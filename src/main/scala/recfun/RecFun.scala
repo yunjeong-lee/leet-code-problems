@@ -1,5 +1,7 @@
 package recfun
 
+import java.util
+
 import com.sun.corba.se.impl.resolver.ORBDefaultInitRefResolverImpl
 
 // Defined a new object 'Index' for the 'Jump Game' problem
@@ -122,6 +124,54 @@ object RecFun extends RecFunInterface {
 
   // Comment: There is a harder version of jump game (Jump Game II) to try!
 
+  /**
+   * Generate Parentheses (#22, Medium)
+   *
+   * Given n pairs of parentheses, write a function to generate all
+   * combinations of well-formed parentheses.
+   *
+   * For example, given n = 3, a solution set is:
+   * [
+   * "((()))",
+   * "(()())",
+   * "(())()",
+   * "()(())",
+   * "()()()"
+   * ]
+   */
+
+  /** Debugging in-progress : Not sure why it is not generating the answers properly?
+   * possibly something wrong in converting back and forth from Array to List? */
+
+  def generateParenthesis(n: Int): List[String] = {
+
+    def ParenthesisRec(ans: Array[String],
+                        res: StringBuilder,
+                        left: Int, right: Int, max: Int): Unit = {
+      if (res.length == max * 2) {
+        ans.++(res.toString)
+      }
+      // left refers to number of open parentheses
+      if (left < max) {
+        res.append('(')
+        // After using a open parenthesis, add left by 1 and run recursion
+        ParenthesisRec(ans, res, left + 1, right, max)
+        res.deleteCharAt(res.length - 1)
+      }
+      // right refers to number of close parentheses
+      if (right < left) {
+        res.append(')')
+        // After using a close parenthesis, add right by 1 and run recursion
+        ParenthesisRec(ans, res, left, right + 1, max)
+        res.deleteCharAt(res.length - 1)
+      }
+    }
+
+    val ans: Array[String] = new Array[String](n*2)
+    val res: StringBuilder = new StringBuilder()
+    ParenthesisRec(ans, res, 0, 0, n)
+    ans.toList
+  }
 
 
 }
