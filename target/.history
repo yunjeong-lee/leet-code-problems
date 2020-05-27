@@ -28,3 +28,22 @@ List[Str]
 console
 compile
 test
+sbt
+console
+class ListNode(_x: Int = 0, _next: ListNode = null) {
+  var x: Int = _x
+  var next: ListNode = _next
+console
+def findMin(nums: Array[Int]): Int = {
+e element, then return the element
+ums.length == 1) {
+ums(0)
+itialize the left and right pointers
+: Int = nums.length
+t = 0
+t = len - 1
+o rotation, return the first element
+ums(lo) < nums(hi)) {
+ums(lo)
+dex for mid-point
+console

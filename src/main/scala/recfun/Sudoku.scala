@@ -1,7 +1,7 @@
 package recfun
 import java.util.HashMap
 
-class Sudoku extends RecFunInterface {
+class Sudoku {
 
   /**
    * isValid Sudoku (#36, Medium)

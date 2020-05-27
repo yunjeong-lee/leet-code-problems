@@ -9,17 +9,18 @@ class RecFunSuite {
   // ------ coinChange tests -------------------------------------------------
 
   // To run after debugging
-  /*
-  @Test def `coin change test`: Unit = {
 
+  @Test def `coin change test`: Unit = {
 
     val coins1: Array[Int] = Array(1, 2, 5); val amount1: Int = 11
     val coins2: Array[Int] = Array(2); val amount2: Int = 3
+    val coins3: Array[Int] = Array(186, 419, 83, 408); val amount3: Int = 6249
 
-    assert(coinChange(coins1, amount1) == 11
-          && coinChange(coins2, amount2) == -1)
+    assert(coinChange(coins1, amount1) == 3
+          && coinChange(coins2, amount2) == -1
+          && coinChange(coins3, amount3) == 20)
   }
-   */
+
 
   // ------ canJump tests -------------------------------------------------
 /*

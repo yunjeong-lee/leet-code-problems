@@ -2,10 +2,19 @@ package recfun
 
 import scala.annotation.tailrec
 
-class LinkedListFun extends RecFunInterface {
+class ListNode(_x: Int = 0, _next: ListNode = null) {
+  var x: Int = _x
+  var next: ListNode = _next
+}
+
+object ListNode {
+  def unapply(node: ListNode): Option[Int] = Some(node.x)
+}
+
+class LinkedListFun {
 
   /**
-   * Problem 3 : Add Two Numbers (#2, Medium)
+   * Add Two Numbers (#2, Medium)
    *
    * Given two non-empty linked lists representing two non-negative integers,
    * the digits are stored in reverse order and each of their nodes contain
@@ -14,11 +23,6 @@ class LinkedListFun extends RecFunInterface {
    * You may assume the two numbers do not contain any leading zero, except
    * the number 0 itself.
    */
-
-  /*class ListNode(_x: Int = 0, _next: ListNode = null) {
-    var x: Int = _x
-    var next: ListNode = _next
-  }*/
 
   def addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
     var dummyHead : ListNode = new ListNode()
@@ -47,7 +51,7 @@ class LinkedListFun extends RecFunInterface {
   }
 
   /**
-   * Problem 9 : Swap Nodes in Pairs (#24, Medium)
+   * Swap Nodes in Pairs (#24, Medium)
    * (using class ListNode from Problem 3 above)
    *
    * Given a linked list, swap every two adjacent nodes and return its head.
@@ -75,7 +79,7 @@ class LinkedListFun extends RecFunInterface {
   }
 
   /**
-   * Problem 10 : Reorder List (#143, Medium)
+   * Reorder List (#143, Medium)
    * (using class ListNode from Problem 3 above)
    *
    * Given a singly linked list L: L0→L1→…→Ln-1→Ln,
