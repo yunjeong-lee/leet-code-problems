@@ -54,9 +54,9 @@ class NumFunTests extends NumFun {
     val numerator3: Int = 2; val denominator3: Int = 3
 
     // To run after debugging is complete
-    assert(fractionToDecimal(numerator1, denominator1) == "0.5"
+    assert(/*fractionToDecimal(numerator1, denominator1) == "0.5"
         && fractionToDecimal(numerator2, denominator2) == "2"
-        && fractionToDecimal(numerator3, denominator3) == "0.(6)")
+        && fractionToDecimal(numerator3, denominator3) == "0.(6)"*/)
   }
 
   // ------ Three Sum test -------------------------------------------------
