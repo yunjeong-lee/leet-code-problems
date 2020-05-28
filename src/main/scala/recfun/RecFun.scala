@@ -5,6 +5,8 @@ import java.util
 
 import com.sun.corba.se.impl.resolver.ORBDefaultInitRefResolverImpl
 
+import scala.collection.mutable.ListBuffer
+
 // Defined a new object 'Index' for the 'Jump Game' problem
 // to enumerate a group of named constants for state
 object Index extends Enumeration {
@@ -14,7 +16,7 @@ object Index extends Enumeration {
   class Index extends Val
   // Implicit conversion : omit calling methods or referencing variables directly
   // but instead rely on the compiler to make the connections
-  implicit def convertValue(v: Value): Index = v.asInstanceOf[Index]
+  implicit def convertValue(v: Value): Index = v.asInstanceOf[Index] // Note 'asInstanceOf' method!
 
 }
 
@@ -90,43 +92,76 @@ object RecFun {
    *
    * Determine if you are able to reach the last index.
    *
+   * Example 1:
+   * * Input: nums = [2,3,1,1,4]
+   * * Output: true
+   *
+   * Example 2:
+   * Input: nums = [3,2,1,0,4]
+   * Output: false
+   *
    * Constraints:
    * 1 <= nums.length <= 3 * 10^4
    * 0 <= nums[i][j] <= 10^5
    */
 
-  def canJump(nums: Array[Int]): Boolean = {
-    var memo: Array[Index.Index] = Array()
+  // Sub-optimal backtracking approach
+  def canJump0(nums: Array[Int]): Boolean = {
 
     def canJumpFromPosition(position: Int, nums: Array[Int]): Boolean = {
-      if (memo(position) != Index.UNKNOWN) {
-        if (memo(position) == Index.GOOD) true
-        else false
-      }
-      val furthestJump: Int =
-        Math.min(position + nums(position), nums.length - 1)
+      if (position == nums.length - 1) true
+      else {
+        // Furthest jump that can be made, and the next position
+        val furthestJump: Int = Math.min(position + nums(position), nums.length - 1)
+        var nextPosition: Int = position + 1
+        var reachability: Boolean = false
 
-      var nextPosition: Int = position + 1
-
-      while(nextPosition <= furthestJump) {
-        if (canJumpFromPosition(nextPosition, nums)) {
-          memo(position) = Index.GOOD
-          true
+        while (nextPosition <= furthestJump) {
+          // If the last position can be reached from nextPositions, return true
+          if (canJumpFromPosition(nextPosition, nums)) {reachability = true}
+          nextPosition += 1
         }
-        {nextPosition += 1;
-          nextPosition - 1}
+        reachability
       }
-      memo(position) = Index.BAD
-      false
     }
 
+    canJumpFromPosition(0, nums)
+  }
+
+
+  // More optimal approach (top-down dynamic programming version)
+  def canJump1(nums: Array[Int]): Boolean = {
+
+    var memo: Array[Index.Index] = Array()
     memo = Array.ofDim[Index.Index](nums.length)
+
     // Set all to be UNKNOWN at first
     for (i <- 0 until memo.length) {
       memo(i) = Index.UNKNOWN
     }
     // Set the last one to be GOOD
     memo(memo.length - 1) = Index.GOOD
+
+    def canJumpFromPosition(position: Int, nums: Array[Int]): Boolean = {
+      if (memo(position) != Index.UNKNOWN) {
+        if (memo(position) == Index.GOOD) true
+        else false
+      } else { // when it is UNKNOWN
+      val furthestJump: Int = Math.min(position + nums(position), nums.length - 1)
+      var nextPosition: Int = position + 1
+      var reachability: Boolean = false
+
+      while(nextPosition <= furthestJump) {
+        if (canJumpFromPosition(nextPosition, nums)) {
+          memo(position) = Index.GOOD
+          reachability = true
+        }
+        nextPosition += 1
+      }
+      memo(position) = Index.BAD
+      reachability
+      }
+    }
 
     canJumpFromPosition(0, nums)
   }
@@ -147,36 +182,19 @@ object RecFun {
    * ]
    */
 
-  /** Debugging in-progress : Not sure why it is not generating the answers properly?
-   * possibly something wrong in converting back and forth from Array to List? */
-
   def generateParenthesis(n: Int): List[String] = {
 
-    def ParenthesisRec(ans: Array[String],
-                        res: StringBuilder,
-                        left: Int, right: Int, max: Int): Unit = {
-      if (res.length == max * 2) {
-        ans.++(res.toString)
+    val ans: ListBuffer[String] = new ListBuffer[String]()
+    if (n == 0) {
+      ans.addOne("")
+    } else {
+      for (c <- 0 until n;
+           left <- generateParenthesis(c);
+           right <- generateParenthesis(n - 1 - c)) {
+        ans.addOne("(" + left + ")" + right)
       }
-      // left refers to number of open parentheses
-      if (left < max) {
-        res.append('(')
-        // After using a open parenthesis, add left by 1 and run recursion
-        ParenthesisRec(ans, res, left + 1, right, max)
-        res.deleteCharAt(res.length - 1)
-      }
-      // right refers to number of close parentheses
-      if (right < left) {
-        res.append(')')
-        // After using a close parenthesis, add right by 1 and run recursion
-        ParenthesisRec(ans, res, left, right + 1, max)
-        res.deleteCharAt(res.length - 1)
-      }
+      ans
     }
-
-    val ans: Array[String] = new Array[String](n*2)
-    val res: StringBuilder = new StringBuilder()
-    ParenthesisRec(ans, res, 0, 0, n)
     ans.toList
   }
 

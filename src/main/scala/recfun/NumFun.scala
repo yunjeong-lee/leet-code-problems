@@ -5,6 +5,7 @@ import java.util
 import scala.collection.immutable.HashMap
 import scala.collection.mutable
 
+
 class NumFun {
 
   /**
@@ -21,7 +22,8 @@ class NumFun {
    * so you need to return a string instead of an integer.
    */
 
-  /** Debugging the below function is in-progress.. */
+    /** Currently simply attaching numbers in a row...
+     *  comparator is not working properly */
 
   def largestNumber(nums: Array[Int]): String = {
 
@@ -31,11 +33,15 @@ class NumFun {
       strings(i) = (nums(i)).toString
     }
 
+    // Define a new comparator
+    def comparator(s1: String, s2: String): Boolean = {
+      val order12: String = s1 + s2
+      val order21: String = s2 + s1
+      order21.compareTo(order12) >= 0 // note: compareTo method
+    }
+
     // Sort strings according to the comparator
-    strings.sortWith{(s1, s2) =>
-      val s12: String = s1 + s2
-      val s21: String = s2 + s1
-      (s12.compareTo(s21)) >= 0} // note: compareTo method
+    strings.sortWith(comparator)
 
     // If the largest one, after sorting, is zero, the entire number is "0".
     if (strings(0) == ("0")) {"0"}
@@ -46,7 +52,6 @@ class NumFun {
       largestNumStr += numAsStr
     }
     largestNumStr
-
   }
 
   /**
@@ -131,7 +136,7 @@ class NumFun {
    * If the fractional part is repeating, enclose the repeating part in parentheses.
    */
 
-  /** Debugging in-progress.. something is not right about below..*/
+  /** Debugging in-progress.. in the else-branch...!! */
 
   def fractionToDecimal(numerator: Int, denominator: Int): String = {
 
@@ -236,9 +241,6 @@ class NumFun {
     triplets.toList
 
   }
-
-  // To do: After debugging the above, try out a related problem, 3Sum Closest (#15)
-
 
   /**
    * Divide Two Integers (#29, Medium)

@@ -23,22 +23,26 @@ class RecFunSuite {
 
 
   // ------ canJump tests -------------------------------------------------
-/*
-@Test def `can jump test`: Unit = {
+
+  @Test def `can jump test`: Unit = {
 
   val nums1: Array[Int] = Array(2, 3, 1, 1, 4)
   val nums2: Array[Int] = Array(3, 2, 1, 0, 4)
 
-  // To run after debugging
-  assert(/*canJump(nums1) && !canJump(nums2)*/ true)
-}
-*/
+  assert(canJump0(nums1) && !canJump0(nums2)
+      && canJump1(nums1) && !canJump1(nums2))
+  }
 
   // ------ generateParenthesis tests -------------------------------------------------
-  /*@Test def `generate parenthesis test`: Unit = {
+  /* Comment : Something wrong with the way I use assert with exists?!
+  @Test def `generate parenthesis test`: Unit = {
 
-    // To run after debugging
-    assert(generateParenthesis(3) == List("((()))","(()())","(())()","()(())","()()()"))
+    val paren3: List[String] = List("((()))","(()())","(())()","()(())","()()()")
+    val generated3: List[String] = generateParenthesis(3)
+    for (i <- 0 until generated3.length) {
+      val elem = generated3(i)
+      assert(paren3.exists(elem))
+    }
   }*/
 
 }

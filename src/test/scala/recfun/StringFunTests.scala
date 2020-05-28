@@ -11,8 +11,8 @@ class StringFunTests extends StringFun {
     val s2: String = "bbbbb"
 
     // To test after debugging
-    assert(/*lengthOfLongestSubstring(s1) == 3 &&
-      lengthOfLongestSubstring(s2) == 1*/ true)
+    assert(lengthOfLongestSubstring(s1) == 3 &&
+      lengthOfLongestSubstring(s2) == 1)
   }
 
   // ------ simplify path test -------------------------------------------------
