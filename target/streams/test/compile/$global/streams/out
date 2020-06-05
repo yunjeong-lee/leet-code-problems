@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/test/scala/leetcodefun/Problem166_FractionToDecimalTests.scala:18:3: overloaded method value assert with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (assertion: Boolean,message: => Any)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (assertion: Boolean)Unit[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to ()[0m
+[0m[[0m[31merror[0m] [0m[0m		assert(/*fractionToDecimal(numerator1, denominator1) == "0.5"[0m
+[0m[[0m[31merror[0m] [0m[0m		^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/yunjeonglee/Courses/LeetCode_Scala_problems/leet-code-problems/src/test/scala/leetcodefun/Problem179_LargestNumberTests.scala:15:3: overloaded method value assert with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (assertion: Boolean,message: => Any)Unit <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (assertion: Boolean)Unit[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to ()[0m
+[0m[[0m[31merror[0m] [0m[0m		assert(/*largestNumber(nums1) == "210" &&[0m
+[0m[[0m[31merror[0m] [0m[0m		^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

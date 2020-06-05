@@ -1,60 +1,167 @@
 [0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 5 initial tasks for 5 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(recfun.BinaryTreeFunTests, sbt.ForkMain$AnnotatedFingerscan@676bc778, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 22 initial tasks for 22 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem133_CloneGraphTests, sbt.ForkMain$AnnotatedFingerscan@528d1bc9, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mBinaryTreeFunTests[0m.[36munique binary search tree test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mBinaryTreeFunTests[0m.[36munique binary search tree test[0m finished, took 0.114 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mBinaryTreeFunTests[0m.[36munique binary search tree II test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mBinaryTreeFunTests[0m.[36munique binary search tree II test[0m finished, took 0.008 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.181s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 2 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(recfun.NumFunTests, sbt.ForkMain$AnnotatedFingerscan@c1cc0f7, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mthree sum test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mthree sum test[0m finished, took 0.003 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mdivide two integers test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mdivide two integers test[0m finished, took 0.001 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mpower function test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mpower function test[0m finished, took 0.013 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mlargest number test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mlargest number test[0m finished, took 0.0 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mfraction to decimal test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36mfraction to decimal test[0m finished, took 0.0 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36msingle number II test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mNumFunTests[0m.[36msingle number II test[0m finished, took 0.035 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 0.068s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(recfun.PermuteFunTests, sbt.ForkMain$AnnotatedFingerscan@476cb989, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mPermuteFunTests[0m.[36mnext permutations test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mPermuteFunTests[0m.[36mnext permutations test[0m finished, took 0.03 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.031s[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem133_CloneGraphTests[0m.[36mclone graph tests[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem133_CloneGraphTests[0m.[36mclone graph tests[0m finished, took 0.25 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.422s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(recfun.LinkedListFunTests, sbt.ForkMain$AnnotatedFingerscan@2f40e0dd, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem153_FindMinTests, sbt.ForkMain$AnnotatedFingerscan@477c54f1, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mLinkedListFunTests[0m.[36madd two numbers test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mLinkedListFunTests[0m.[36madd two numbers test[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem153_FindMinTests[0m.[36mfind min in rotated sorted array test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem153_FindMinTests[0m.[36mfind min in rotated sorted array test[0m finished, took 0.139 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.141s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem71_SimplifyPathTests, sbt.ForkMain$AnnotatedFingerscan@6150c0aa, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem71_SimplifyPathTests[0m.[36msimplify path test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem71_SimplifyPathTests[0m.[36msimplify path test[0m finished, took 0.1 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.114s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem200_NumberOfIslandsTests, sbt.ForkMain$AnnotatedFingerscan@4b46bd4f, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem200_NumberOfIslandsTests[0m.[36mnumber of islands tests[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem200_NumberOfIslandsTests[0m.[36mnumber of islands tests[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.003s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(recfun.StringFunTests, sbt.ForkMain$AnnotatedFingerscan@5944c9d9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem179_LargestNumberTests, sbt.ForkMain$AnnotatedFingerscan@7c23def4, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mword ladder length test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mword ladder length test[0m finished, took 0.001 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36msimplify path test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36msimplify path test[0m finished, took 0.007 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mlength of longest substring test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mlength of longest substring test[0m finished, took 0.001 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mrestore IP addresses test[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest recfun.[33mStringFunTests[0m.[36mrestore IP addresses test[0m finished, took 0.0 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.011s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem179_LargestNumberTests[0m.[36mlargest number test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem179_LargestNumberTests[0m.[36mlargest number test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.003s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem96_UniqueBSTTests, sbt.ForkMain$AnnotatedFingerscan@1d7467d9, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem96_UniqueBSTTests[0m.[36munique binary search tree test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem96_UniqueBSTTests[0m.[36munique binary search tree test[0m finished, took 0.003 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.005s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem154_FindMinIITests, sbt.ForkMain$AnnotatedFingerscan@439ac868, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem154_FindMinIITests[0m.[36mfind min in rotated sorted array II test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem154_FindMinIITests[0m.[36mfind min in rotated sorted array II test[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.004s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem322_CoinChangeTests, sbt.ForkMain$AnnotatedFingerscan@d4fca77, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem322_CoinChangeTests[0m.[36mcoin change test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem322_CoinChangeTests[0m.[36mcoin change test[0m finished, took 0.065 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.067s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem127_WordLadderTests, sbt.ForkMain$AnnotatedFingerscan@4b275800, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem127_WordLadderTests[0m.[36mword ladder length test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem127_WordLadderTests[0m.[36mword ladder length test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.006s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem55_JumpGameTests, sbt.ForkMain$AnnotatedFingerscan@5ab4741c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem55_JumpGameTests[0m.[36mcan jump test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem55_JumpGameTests[0m.[36mcan jump test[0m finished, took 0.04 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.04s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem137_SingleNumberTests, sbt.ForkMain$AnnotatedFingerscan@7b051183, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem137_SingleNumberTests[0m.[36msingle number II test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem137_SingleNumberTests[0m.[36msingle number II test[0m finished, took 0.012 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.023s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem93_RestoreIpAddressesTests, sbt.ForkMain$AnnotatedFingerscan@630fd00f, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem93_RestoreIpAddressesTests[0m.[36mrestore IP addresses test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem93_RestoreIpAddressesTests[0m.[36mrestore IP addresses test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.003s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem130_SurroundedRegionsTests, sbt.ForkMain$AnnotatedFingerscan@ce018f0, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem130_SurroundedRegionsTests[0m.[36msurrounded regions test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem130_SurroundedRegionsTests[0m.[36msurrounded regions test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.001s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem15_ThreeSumTests, sbt.ForkMain$AnnotatedFingerscan@7729a03d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem15_ThreeSumTests[0m.[36mthree sum test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem15_ThreeSumTests[0m.[36mthree sum test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.002s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem166_FractionToDecimalTests, sbt.ForkMain$AnnotatedFingerscan@11300bb3, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem166_FractionToDecimalTests[0m.[36mfraction to decimal test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem166_FractionToDecimalTests[0m.[36mfraction to decimal test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.002s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem31_NextPermutationTests, sbt.ForkMain$AnnotatedFingerscan@6be37478, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem31_NextPermutationTests[0m.[36mnext permutations test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem31_NextPermutationTests[0m.[36mnext permutations test[0m finished, took 0.009 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.011s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem95_UniqueBSTIITests, sbt.ForkMain$AnnotatedFingerscan@121a9146, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem95_UniqueBSTIITests[0m.[36munique binary search tree II test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem95_UniqueBSTIITests[0m.[36munique binary search tree II test[0m finished, took 0.004 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.005s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem79_WordSearchTests, sbt.ForkMain$AnnotatedFingerscan@13ed0208, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem79_WordSearchTests[0m.[36mword search test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem79_WordSearchTests[0m.[36mword search test[0m finished, took 0.0 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.002s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem50_PowTests, sbt.ForkMain$AnnotatedFingerscan@4def98f7, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem50_PowTests[0m.[36mpower function test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem50_PowTests[0m.[36mpower function test[0m finished, took 0.007 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.008s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem3_LengthOfLongestSubstringTests, sbt.ForkMain$AnnotatedFingerscan@746f471b, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem3_LengthOfLongestSubstringTests[0m.[36mlength of longest substring test[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest leetcodefun.[33mProblem3_LengthOfLongestSubstringTests[0m.[31mlength of longest substring test[0m failed: java.lang.[31mAssertionError[0m: assertion failed, took 0.039 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:267)[0m
+[0m[[0m[31merror[0m] [0m[0m    at leetcodefun.Problem3_LengthOfLongestSubstringTests.length of longest substring test([35mProblem3_LengthOfLongestSubstringTests.scala[0m:[33m27[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem3_LengthOfLongestSubstringTests[0m.[36mlength of longest substring test[0m finished, took 0.054 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.055s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem29_DivideTwoIntegersTests, sbt.ForkMain$AnnotatedFingerscan@4995f08a, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem29_DivideTwoIntegersTests[0m.[36mdivide two integers test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem29_DivideTwoIntegersTests[0m.[36mdivide two integers test[0m finished, took 0.001 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.001s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(leetcodefun.Problem215_KthLargestEleminArrayTests, sbt.ForkMain$AnnotatedFingerscan@57f4d6bb, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest leetcodefun.[33mProblem215_KthLargestEleminArrayTests[0m.[36mKth largest element in an array test[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest leetcodefun.[33mProblem215_KthLargestEleminArrayTests[0m.[36mKth largest element in an array test[0m finished, took 0.008 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.01s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 14, Failed 0, Errors 0, Passed 14[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 22, Failed 1, Errors 0, Passed 21[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	recfun.BinaryTreeFunTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	recfun.NumFunTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	recfun.PermuteFunTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	recfun.LinkedListFunTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	recfun.StringFunTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem133_CloneGraphTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem153_FindMinTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem71_SimplifyPathTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem200_NumberOfIslandsTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem179_LargestNumberTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem96_UniqueBSTTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem154_FindMinIITests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem322_CoinChangeTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem127_WordLadderTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem55_JumpGameTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem137_SingleNumberTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem93_RestoreIpAddressesTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem130_SurroundedRegionsTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem15_ThreeSumTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem166_FractionToDecimalTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem31_NextPermutationTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem95_UniqueBSTIITests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem79_WordSearchTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem50_PowTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem29_DivideTwoIntegersTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	leetcodefun.Problem215_KthLargestEleminArrayTests[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	leetcodefun.Problem3_LengthOfLongestSubstringTests[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
