@@ -1,6 +1,3 @@
-course := "progfun1"
-assignment := "recfun"
-
 scalaVersion := "2.13.0"
 
 scalacOptions ++= Seq("-language:implicitConversions", "-deprecation")
