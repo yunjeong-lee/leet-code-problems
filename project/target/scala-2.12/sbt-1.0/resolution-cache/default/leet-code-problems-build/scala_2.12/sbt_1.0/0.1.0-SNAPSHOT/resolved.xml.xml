@@ -4,7 +4,7 @@
 		module="leet-code-problems-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20200514202922"
+		publication="20200609231536"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
