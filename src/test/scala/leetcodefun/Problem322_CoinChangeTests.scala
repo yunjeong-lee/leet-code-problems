@@ -17,8 +17,7 @@ class Problem322_CoinChangeTests extends Problem322_CoinChange {
     assert(coinChange(coins1, amount1) == 3
           && coinChange(coins2, amount2) == -1
           && coinChange(coins3, amount3) == 20
-          && coinChange(randCoins, randAmt) != -1)
-    // ha... this random testing is not very satisfying...
+          /*&& coinChange(randCoins, randAmt) != -1*/)
   }
 
 

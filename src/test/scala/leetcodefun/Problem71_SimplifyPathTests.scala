@@ -18,7 +18,7 @@ class Problem71_SimplifyPathTests extends Problem71_SimplifyPath {
 			&& simplifyPath(path3) == "/home/foo"
 			&& simplifyPath(path4) == "/c"
 			&& simplifyPath(path5) == "/c"
-			/*&& simplifyPath(path6) == "/a/b/c"*/)
+			&& simplifyPath(path6) == "/b/c/d")
 
 
 	}
