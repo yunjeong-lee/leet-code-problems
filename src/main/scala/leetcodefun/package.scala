@@ -2,6 +2,8 @@ package leetcodefun
 
 import scala.collection.mutable
 import scala.util.Random
+import org.scalacheck.Gen
+import org.scalacheck.Prop.forAll
 
 package object local_library {
 
@@ -84,6 +86,15 @@ package object local_library {
 		loop (node, Nil)
 	}
 
+
+	/** Scalacheck examples */
+
+	// strGen generates a fixed length random string
+	val strGen = (n: Int) => Gen.listOfN(n, Gen.alphaChar).map(_.mkString)
+
+	val fixedLengthStr = forAll(strGen(10)){ s =>
+		s.length == 10
+	}
 
 
 
