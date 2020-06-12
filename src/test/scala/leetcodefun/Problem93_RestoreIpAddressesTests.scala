@@ -10,6 +10,7 @@ class Problem93_RestoreIpAddressesTests extends Problem93_RestoreIpAddresses {
 
 		val input1: String = "25525511135"
 
+		// debugging in-progress
 		assert(/*restoreIpAddresses(input1) == List("255.255.11.135", "255.255.111.35")*/ true)
 
 	}

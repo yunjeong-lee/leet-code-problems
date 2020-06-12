@@ -19,9 +19,6 @@ class Problem93_RestoreIpAddresses {
 	 * Output: ["255.255.11.135", "255.255.111.35"]
 	 */
 
-	/** Comment:
-	 * Debugging is in-progress -> currently causing the NullPointerException */
-
 	def restoreIpAddresses(s: String): List[String] = {
 
 		var n: Int = 0

@@ -16,36 +16,36 @@ class Problem179_LargestNumber {
 	 * so you need to return a string instead of an integer.
 	 */
 
-	/** Currently simply attaching numbers in a row...
-	 *  comparator is not working properly */
-
 	def largestNumber(nums: Array[Int]): String = {
 
 		// Convert the Array[Int] to Array[String]
 		val strings: Array[String] = Array.ofDim(nums.length)
 		for (i <- 0 until nums.length) {
-			strings(i) = (nums(i)).toString
+			strings(i) = nums(i).toString
 		}
 
 		// Define a new comparator
 		def comparator(s1: String, s2: String): Boolean = {
-			val order12: String = s1 + s2
-			val order21: String = s2 + s1
-			order21.compareTo(order12) >= 0 // note: compareTo method
+			var res: Boolean = true
+			if ((s1 + s2).compareTo(s2 + s1) < 0) {
+				res = false
+			}
+			res
 		}
 
-		// Sort strings according to the comparator
-		strings.sortWith(comparator)
+		val sortedStr: Array[String] = strings.sortWith(comparator)
 
 		// If the largest one, after sorting, is zero, the entire number is "0".
-		if (strings(0) == ("0")) {"0"}
-
-		// Build largest number from sorted array
-		var largestNumStr: String = new String()
-		for (numAsStr <- strings) {
-			largestNumStr += numAsStr
+		if (sortedStr(0) == "0") {"0"}
+		else {
+			// Build largest number from sorted array
+			var largestNumStr: String = new String()
+			// append each string that is sorted according to the comparator
+			for (numAsStr <- sortedStr) {
+				largestNumStr = largestNumStr + numAsStr
+			}
+			largestNumStr
 		}
-		largestNumStr
 	}
 
 }

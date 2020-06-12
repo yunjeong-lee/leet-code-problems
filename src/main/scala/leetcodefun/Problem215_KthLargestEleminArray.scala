@@ -1,5 +1,7 @@
 package leetcodefun
 
+import scala.collection.mutable.PriorityQueue
+
 class Problem215_KthLargestEleminArray {
 	/**
 	 * Kth Largest Element in an Array (#215, Medium)
@@ -20,9 +22,21 @@ class Problem215_KthLargestEleminArray {
 	 * You may assume k is always valid, 1 ≤ k ≤ array's length.
 	 */
 
-	/*def findKthLargest(nums: Array[Int], k: Int): Int = {
-		// Ideation in-progress
-	}*/
+	def findKthLargest(nums: Array[Int], k: Int): Int = {
+
+		// Initialize heap in a reverse order
+		val heap: PriorityQueue[Int] = new PriorityQueue[Int]().reverse
+
+		// Keep only the k largest elements in the heap
+		for (n <- nums) {
+			heap.addOne(n)
+			// Remove the element with the highest priority in the queue
+			if (heap.size > k) { heap.dequeue() }
+		}
+
+		// Return the kth largest element (by dequeue)
+		heap.dequeue()
+	}
 
 
 }

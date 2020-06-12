@@ -20,9 +20,6 @@ class Problem71_SimplifyPath {
 	 * the absolute path.
 	 */
 
-	/** Comment: debugging in-progress.
-	 * Check path6 for the edge-case test that failed. */
-
 	def simplifyPath(path: String): String = {
 
 		// When no path was given (i.e., empty string)
@@ -34,24 +31,24 @@ class Problem71_SimplifyPath {
 
 			// Process each component of path one by one
 			for (directory <- components) {
-
 				// A no-op for a "." or an empty string
 				if (directory.equals(".") || directory.isEmpty) {} // "." -> current directory, so continue
-				else if (directory.equals("..")) {
 
-					// If the current component is "..",
-					// go up a level, i.e., pop an element from the stack if it's not empty
+				// If the current component is "..",
+				// go up a level, i.e., pop an element from the stack if it's not empty
+				else if (directory.equals("..")) {
 					if (!stack.isEmpty) {stack.pop()}
+					else {}
 				}
+				// Otherwise, add the legitimate directory to the stack
 				else {
-					// Otherwise, add the legitimate directory to the stack
-					stack.addOne(directory)
+					stack.push(directory)
 				}
 			}
 
 			// Combine legitimate names together
 			val result: StringBuilder = new StringBuilder() //note: use of StringBuilder
-			for (dir <- stack) {
+			for (dir <- stack.reverse) {
 				result.append("/")
 				result.append(dir)
 			}

@@ -1,6 +1,7 @@
 package leetcodefun
 
-import scala.collection.immutable.HashMap
+import scala.collection.mutable.HashMap
+import scala.util.control.Breaks
 
 class Problem166_FractionToDecimal {
 
@@ -18,24 +19,21 @@ class Problem166_FractionToDecimal {
 		val fraction: StringBuilder = new StringBuilder()
 
 		// If numerator is zero, return "0"
-		if (numerator == 0) {"0"}
+		if (numerator == 0) { return "0" }
 
-		// If numerator or denominator is negative
-		// (but not both of them are negative -> note the usage of `^`),
+		// If either numerator or denominator is negative, but not both (`^`),
 		// then append "-" in front
-		if (numerator < 0 ^ denominator < 0) {
-			fraction.append("-")
-		}
+		if (numerator < 0 ^ denominator < 0) { fraction.append("-") }
 
-		// Convert to Double
-		val dividend: Double = Math.abs(numerator.toDouble)
-		val divisor: Double = Math.abs(denominator.toDouble)
+		// Convert to positive number
+		val dividend: Int = Math.abs(numerator)
+		val divisor: Int = Math.abs(denominator)
 
 		// Append the division result
 		fraction.append((dividend / divisor).toString)
 
 		// If remainder == 0 -> then convert to string and return result
-		var remainder: Double = dividend % divisor
+		var remainder: Int = dividend % divisor
 		if (remainder == 0) {
 			fraction.toString
 		}
@@ -43,24 +41,28 @@ class Problem166_FractionToDecimal {
 			fraction.append(".")
 
 			// Create a hashmap
-			val map: HashMap[Double, Integer] = new HashMap[Double, Integer]()
+			val map: HashMap[Int, Long] = new HashMap[Int, Long]()
+			val while_loop = new Breaks
 
 			while (remainder != 0) {
 				if (map.contains(remainder)) {
-					var rem: Option[Integer] = map.get(remainder)
+					var rem: Option[Long] = map.get(remainder)
 					// Insert it only if it is not None
 					rem match {
-						case Some(p) => fraction.insert(p, "(")
+						case Some(p) => fraction.insert(p.toInt, "(")
 						case None => ()
 					}
 					fraction.append(")")
-				}
-				// Update hashmap with (remainder, fraction length)
-				map.updated(remainder, fraction.length)
-				remainder *= 10
+					return fraction.toString
+					while_loop.break
+				} else {
+					// Update hashmap with (key: remainder, value: fraction length)
+					map.update(remainder, fraction.length)
+					remainder *= 10
 
-				fraction.append(String.valueOf(remainder / divisor))
-				remainder %= divisor // modulus and assignment
+					fraction.append(String.valueOf(remainder / divisor))
+					remainder %= divisor // modulus and assignment
+				}
 			}
 			fraction.toString
 		}
