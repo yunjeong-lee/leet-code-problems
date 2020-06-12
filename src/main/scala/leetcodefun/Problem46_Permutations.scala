@@ -23,7 +23,7 @@ class Problem46_Permutations {
    *        ]
    */
 
-  def permute(nums: Array[Int]): List[List[Int]] = {
+  /*def permute(nums: Array[Int]): List[List[Int]] = {
 
     // Initialize output list
     val output: ListBuffer[List[Int]] = ListBuffer(List())
@@ -57,7 +57,7 @@ class Problem46_Permutations {
 
     output.toList
 
-  }
+  }*/
 
 
 }
