@@ -9,11 +9,11 @@ class Problem153_FindMinTests extends Problem153_FindMin {
 
 		val arr1: Array[Int] = Array(3, 4, 5, 1, 2)
 		val arr2: Array[Int] = Array(4, 5, 6, 7, 0, 1, 2)
-		val randArr: Array[Int] = genRandomIntArray(10):+0
+		/*val randArr: Array[Int] = genRandomIntArray(10):+0*/
 
 		assert(findMin(arr1) == 1
 				&& findMin(arr2) == 0
-				&& findMin(randArr) == 0)
+				/*&& findMin(randArr) == 0*/)
 	}
 
 }
