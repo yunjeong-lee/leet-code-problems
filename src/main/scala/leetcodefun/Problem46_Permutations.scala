@@ -23,41 +23,48 @@ class Problem46_Permutations {
    *        ]
    */
 
-  /*def permute(nums: Array[Int]): List[List[Int]] = {
+  // Helper function : swap index i-th and j-th elements in an array
+  def swap(arr : Array[Int], i: Int, j: Int): Unit = {
+    if (i >= arr.size || j >= arr.size) {
+      throw new Error("swap : index out of range")
+    } else {
+      val x = arr(i); arr(i) = arr(j); arr(j) = x
+    }
+  }
 
-    // Initialize output list
-    val output: ListBuffer[List[Int]] = ListBuffer(List())
-
-    // Convert nums Array into list since the output is a list of lists
-    val nums_ls: ListBuffer[Int] = new ListBuffer[Int]()
-    for (i <- nums) nums_ls.addOne(i)
-
-    val n: Int = nums.length
-
-    backtrack(n, nums_ls, output, 0)
-
-    // Explore all candidates by backtracking
-    def backtrack(n: Int,
-                  nums: ListBuffer[List[Int]],
-                  output: List[List[Int]],
-                  first: Int): Unit = {
-      // If all integers are used up
-      if (first == n) {
-        output.::(new ListBuffer[Int](nums))
-      }
+  // backtrack : explore all candidates
+  def backtrack(nums: Array[Int],
+                output: ListBuffer[Array[Int]],
+                first: Int, n: Int): Unit = {
+    // If all integers are used up
+    if (first == n) {
+      output.addOne(nums)
+    } else {
       for (i <- first until n) {
-        // place i-th integer first in the current permutation
-        Collections.swap(nums.toList, first, i)
-        // use next integers to complete the permutations
-        backtrack(n, nums, output, first + 1)
-        // backtrack
-        Collections.swap(nums.toList, first, i)
+        // Place i-th integer first in the current permutation
+        swap(nums, first, i)
+        // Use next integers to complete the permutations
+        backtrack(nums, output, first + 1, n)
+        // Backtrack
+        swap(nums, first, i)
       }
     }
+  }
 
-    output.toList
+  def permute(nums: Array[Int]): List[List[Int]] = {
 
-  }*/
+    // Initialize output
+    val output: ListBuffer[Array[Int]] = new ListBuffer[Array[Int]]()
+    val n: Int = nums.length
+    backtrack(nums, output, 0, n)
+
+    val res: ListBuffer[List[Int]] = new ListBuffer[List[Int]]()
+    // Convert Array[Array[Int]] to List[List[Int]]
+    for (i <- 0 until output.size) {
+      res.addOne(output(i).toList)
+    }
+    res.toList
+  }
 
 
 }

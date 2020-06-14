@@ -27,8 +27,32 @@ class Problem134_GasStation {
 	 * Output: 3
 	 */
 
-	/*def canCompleteCircuit(gas: Array[Int], cost: Array[Int]): Int = {
-	 	// Ideation in-progress
-	}*/
+	def canCompleteCircuit(gas: Array[Int], cost: Array[Int]): Int = {
+
+		// Initiate total and current tanks as 0
+		val n: Int = gas.length
+		var total_tank: Int = 0
+		var curr_tank: Int = 0
+		var starting_station: Int = 0
+
+		for (i <- 0 until n) {
+			total_tank += gas(i) - cost(i)
+			curr_tank += gas(i) - cost(i)
+
+			// If curr_tank < 0 at (i + 1) station (i.e. when couldn't get here),
+			// make 'i + 1' (i.e., next) stataion as a new starting point
+			if (curr_tank < 0) {
+				starting_station = i + 1
+				// Reset curr_tank as an empty tank
+				curr_tank = 0
+			}
+		}
+
+		if (total_tank >= 0) {
+			starting_station
+		} else {
+			-1
+		}
+	}
 
 }
