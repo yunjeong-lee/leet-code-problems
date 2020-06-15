@@ -11,7 +11,7 @@ class Problem46_PermutationsTests extends Problem46_Permutations {
 
     assert(permute(nums1) ==
       List(List(1, 2, 3), List(1, 3, 2), List(2, 1, 3),
-           List(2, 3, 1), List(3, 1, 2), List(3, 2, 1)))
+           List(2, 3, 1), List(3, 2, 1), List(3, 1, 2)))
   }
 
 }
