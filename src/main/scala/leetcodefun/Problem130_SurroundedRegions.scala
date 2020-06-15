@@ -31,26 +31,35 @@ class Problem130_SurroundedRegions {
 	 * if they are adjacent cells connected horizontally or vertically.
 	 */
 
-	/** Debugging in-progress : Not sure why the following does not pass the test...
-	 * There is a stack-overflow problem...! */
-	def surroundSolve(board: Array[Array[Char]]): Unit = {
+	def solve(board: Array[Array[Char]]): Unit = {
 
 		// If all the elements are on the border, then do nothing
-		if (board.length <= 2) ()
-		else if (board(0).length <= 2) ()
+		if (board.length <= 2 || board(0).length <= 2) { }
 		else {
 
 			val ROWS = board.length
 			val COLS = board(0).length
 
+			// DFS_markE : starting from the border cells, mark the ones that can be escaped
+			def DFS_markE(board: Array[Array[Char]], row: Int, col: Int): Unit = {
+				if (board(row)(col) != 'O') { }
+				else {
+					board(row)(col) = 'E'
+					if (col < COLS - 1) DFS_markE(board, row, col + 1)
+					if (row < ROWS - 1) DFS_markE(board, row + 1, col)
+					if (col > 0) DFS_markE(board, row, col - 1)
+					if (row > 0) DFS_markE(board, row - 1, col)
+				}
+			}
+
 			// Collect the border cells that are 'O's into 'borders'
 			val borders: ListBuffer[(Int, Int)] = new ListBuffer[(Int, Int)]()
 			for (r <- 0 until ROWS) {
-				if (board(r)(0) == 'O') borders.addOne((r, 0));
+				if (board(r)(0) == 'O') borders.addOne((r, 0))
 				if (board(r)(COLS - 1) == 'O') borders.addOne((r, COLS - 1))
 			}
 			for (c <- 0 until COLS) {
-				if (board(0)(c) == 'O') borders.addOne((0, c));
+				if (board(0)(c) == 'O') borders.addOne((0, c))
 				if (board(ROWS-1)(c) == 'O') borders.addOne((ROWS - 1, c))
 			}
 
@@ -66,19 +75,7 @@ class Problem130_SurroundedRegions {
 				if (board(r)(c) == 'E') board(r)(c) = 'O'
 			}
 
-			// Starting from the border cells, mark the ones that can be escaped
-			def DFS_markE(board: Array[Array[Char]], row: Int, col: Int): Unit = {
-				if (board(row)(col) == 'O') { board(row)(col) = 'E'};
-				if (col < COLS - 1) DFS_markE(board, row, col + 1);
-				if (row < ROWS - 1) DFS_markE(board, row + 1, col);
-				if (col > 0) DFS_markE(board, row, col - 1);
-				if (row > 0) DFS_markE(board, row - 1, col);
-			}
 		}
 	}
-
-	// Q: Why is it that if I simply use (instead of ListBuffer as used above)
-	//    var ls: List[(Int, Int)] = Nil and
-	//    cons elements (by .::(elem)) in the for-loops below, it does not work?
 
 }

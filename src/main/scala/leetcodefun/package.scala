@@ -86,6 +86,24 @@ import scala.util.Random
 			loop (node, Nil)
 		}
 
+		/** Check whether contents of Array[Array[Char]]s are identical
+		 * (relevant problem: 130) */
+
+		def equal_CharArrArr(a1: Array[Array[Char]], a2: Array[Array[Char]]): Boolean = {
+			val outer_len: Int = a1.length
+			val inner_len: Int = a1(0).length
+			if (a2.length != outer_len || a2(0).length != inner_len) {
+				throw new Exception ("Arrays being compared are not of same size.")
+			} else {
+				var equality: Boolean = true
+				for (i <- 0 until outer_len;
+						 j <- 0 until inner_len) {
+					if (a1(i)(j) != a2(i)(j)) { equality = false }
+				}
+				equality
+			}
+		}
+
 
 		/** Scalacheck examples */
 

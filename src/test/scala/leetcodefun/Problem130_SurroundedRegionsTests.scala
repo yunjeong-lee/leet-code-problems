@@ -1,5 +1,6 @@
 package leetcodefun
 
+import leetcodefun.local_library._
 import org.junit.Test
 
 class Problem130_SurroundedRegionsTests extends Problem130_SurroundedRegions {
@@ -37,11 +38,9 @@ class Problem130_SurroundedRegionsTests extends Problem130_SurroundedRegions {
 				Array('X', 'O', 'X', 'X')
 			)
 
-		// To run after debugging
-		/*surroundSolve(b1)
-		surroundSolve(b2)*/
-		assert(/*b1 == b1_expected
-				&& b2 == b2_expected*/ true)
+		solve(b1); solve(b2)
+		assert(equal_CharArrArr(b1, b1_expected)
+				&& equal_CharArrArr(b2, b2_expected))
 	}
 
 
