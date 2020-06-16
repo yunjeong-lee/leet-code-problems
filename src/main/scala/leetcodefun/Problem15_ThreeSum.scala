@@ -1,6 +1,6 @@
 package leetcodefun
 
-import scala.collection.mutable
+import scala.collection.mutable.HashSet
 
 class Problem15_ThreeSum {
 
@@ -24,34 +24,43 @@ class Problem15_ThreeSum {
 	 * ]
 	 */
 
-	/** Debugging the below function is in-progress.. */
-
 	def threeSum(nums: Array[Int]): List[List[Int]] = {
 
-		nums.sorted
+		// Sort the input array
+		val nums_sorted = nums.sorted
 
-		val triplets: mutable.HashSet[List[Int]] = new mutable.HashSet[List[Int]]()
+		val res: HashSet[List[Int]] = new HashSet[List[Int]]()
 
-		for (left <- 0 until nums.length - 2) {
-			var mid: Int = left + 1
-			var right: Int = nums.length - 1
+		// Iterate through the input array
+		for (i <- 0 until nums.length - 2) {
+			// Set the low pointer to be i + 1, and high pointer to be the last index
+			var lo: Int = i + 1
+			var hi: Int = nums.length - 1
 
-			while (mid < right) {
-				val sum: Int = nums(left) + nums(mid) + nums(right)
+			while (lo < hi) {
+				val sum: Int = nums_sorted(i) + nums_sorted(lo) + nums_sorted(hi)
 
+				// If sum is less than 0, increment lo
 				if (sum < 0) {
-					mid +=1; mid - 1
-				} else if (sum > 0) {
-					right -= 1; right + 1
-				} else {
-					val triplet: List[Int] = List(nums(left), nums(mid), nums(right))
-					triplets.add(triplet)
-					mid += 1; mid - 1
+					// Also increment lo if the value is the same as for lo - 1
+					lo +=1; lo - 1
+				}
+				// If sum is greater than 0, decrement hi
+				else if (sum > 0) {
+					// Also decrement hi if the value is the same as for hi + 1
+					hi -= 1; hi + 1
+				}
+				// Otherwise, found a triplet and add it to the result
+				else {
+					val triplet: List[Int] = List(nums_sorted(i), nums_sorted(lo), nums_sorted(hi))
+					res.add(triplet)
+					// Increment lo and decrement hi
+					lo += 1; hi -= 1
 				}
 			}
 		}
 
-		triplets.toList
+		res.toList
 
 	}
 

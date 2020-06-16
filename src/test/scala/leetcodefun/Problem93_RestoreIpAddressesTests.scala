@@ -8,10 +8,11 @@ class Problem93_RestoreIpAddressesTests extends Problem93_RestoreIpAddresses {
 
 	@Test def `restore IP addresses test`: Unit = {
 
-		val input1: String = "25525511135"
+		val s1: String = "25525511135"
+		val s2: String = "0000"
 
-		// debugging in-progress
-		assert(/*restoreIpAddresses(input1) == List("255.255.11.135", "255.255.111.35")*/ true)
+		assert(restoreIpAddresses(s1) == List("255.255.11.135", "255.255.111.35")
+				&& restoreIpAddresses(s2) == List("0.0.0.0"))
 
 	}
 

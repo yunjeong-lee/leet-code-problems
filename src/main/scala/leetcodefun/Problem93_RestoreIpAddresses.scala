@@ -20,35 +20,30 @@ class Problem93_RestoreIpAddresses {
 	 */
 
 	def restoreIpAddresses(s: String): List[String] = {
-
 		var n: Int = 0
-		var s: String = null
-		var segments: ListBuffer[String] = new ListBuffer[String]()
-		var output: ListBuffer[String] = new ListBuffer[String]()
+		var str: String = null
+		val segments: ListBuffer[String] = new ListBuffer[String]()
+		val output: ListBuffer[String] = new ListBuffer[String]()
 
 		// Check if the segment is valid (backtracking logic)
 		// 1. The segment should be <= 255
 		// 2. The first character can be '0' only if the segment is equal to '0'
 		def valid(segment: String): Boolean = {
 			val len: Int = segment.length
-			if (3 < len) {
-				false
-			}
-			if (segment.charAt(0) != '0') {
-				segment.toInt <= 255
-			} else {
-				len == 1 // when the first character is '0'
-			}
+			if (3 < len || segment.toInt > 255) { false }
+			// when the first character is '0', then segment is equal to '0'
+			else if (segment.charAt(0) == '0' && len != 1) { false }
+			else { true }
 		}
 
 		// Update output by adding the solution (list of segments) to output (list of solutions)
 		def update_output(curr_pos: Int): Unit = {
-			val segment: String = s.substring(curr_pos + 1, n) // segment til the end of s
+			val segment: String = str.substring(curr_pos + 1, n) // segment til the end of s
 			if (valid(segment)) {
 				segments.addOne(segment)
 				val seg_to_add: String = segments.mkString(".")
 				output.addOne(seg_to_add)
-				// After adding seg_to_add to segments, remove the last placed dot.. => !?!
+				// After adding seg_to_add to segments, remove the last placed dot
 				segments.remove(segments.length - 1, 1)
 			}
 		}
@@ -63,7 +58,7 @@ class Problem93_RestoreIpAddresses {
 			val max_pos: Int = Math.min(n - 1, prev_pos + 4)
 
 			for (curr_pos <- prev_pos + 1 until max_pos) {
-				val segment: String = s.substring(prev_pos + 1, curr_pos + 1)
+				val segment: String = str.substring(prev_pos + 1, curr_pos + 1)
 				if (valid(segment)) {
 					// Place the dot
 					segments.addOne(segment)
@@ -74,17 +69,14 @@ class Problem93_RestoreIpAddresses {
 						// Continue to place the dots
 						backtrack(curr_pos, dots - 1)
 					}
-					// Remove the last placed dot..
-					// => Question: when, during the process, was an additional dot placed?!
 					segments.remove(segments.length - 1, 1)
 				}
 			}
 		}
 
+		str= s
 		n = s.length
 		backtrack(-1, 3)
-		// Question: isn't the number of dots not supposed to set, but
-		// rather proportional to length of string?!
 		output.toList
 	}
 
