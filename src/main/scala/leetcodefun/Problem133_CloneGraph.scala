@@ -2,6 +2,7 @@ package leetcodefun
 
 import scala.collection.mutable.Queue
 import scala.collection.mutable.HashMap
+import leetcodefun.local_library._
 
 class Problem133_CloneGraph {
 
@@ -45,61 +46,35 @@ class Problem133_CloneGraph {
 	 * Output: [[2],[1]]
 	 */
 
-	class Node(var _value: Int) {
-		var value: Int = _value;
-		var neighbors: List[Node] = List()
-	}
-
-
-	def get_exn(opt_value: Option[Node]): Node = {
-		opt_value match {
-			case Some(p) => p;
-			case None => throw new IllegalArgumentException("None is not possible")
-		}
-	}
-
-	/* def cloneGraph(graph: Node): Node = {
-		if (graph == null) {
-			graph
-		}
+	def cloneGraph(node: Node): Node = {
 		// Hash map to save the visited nodes and its clone as key/value
 		val visited: HashMap[Node, Node] = new HashMap[Node, Node]()
 
-		// Make a queue and put the first node (which is given graph) in the queue
-		val queue: Queue[Node] = new Queue[Node]()
-		queue.addOne(graph)
+		if (node == null) {
+			return node
+		}
 
-		// Clone the node and put it in the visited hashmap
-		visited.put(graph, new Node(graph.value))
+		// If the node has already visited before, return the clone from the visited dictionary.
+		else if (visited.contains(node)){
+			return get_exn(visited.get(node))
+		}
 
-		// Begin the Breadth-First Search traversal
-		while (!queue.isEmpty) {
-			// Pop a node from the front of the queue
-			val n: Node = queue.remove(0)
+		else {
+			// Create a clone for the given node (Note no cloned neighbors at this point)
+			val cloneNode: Node = new Node(node.value)
 
-			// Iterate through all the neighbors of the node "n"
-			for (neighbor <- n.neighbors) {
-				if (!visited.contains(neighbor)) {
-					visited.put(neighbor, new Node(neighbor.value))
-					queue.addOne(neighbor)
-				}
-				get_exn(visited.get(n)).neighbors.++(visited.get(neighbor))
+			// The key is original node, and the value is the cloned node
+			visited.put(node, cloneNode)
+
+			// Iterate over neighbors to generate their clones
+			// And add the list of cloned neighbors to the clonedNode
+			for (neighbor <- node.neighbors) {
+				cloneNode.neighbors = cloneNode.neighbors.::(cloneGraph(neighbor))
 			}
+			cloneNode
 		}
-		get_exn(visited.get(graph))
-	}
-	*/
 
-	/*
-	if (visited.contains(graph)) {
-		// Return the clone from the visited hashmap
-		get_exn(visited.get(graph))
-	} else {
-		val cloneNode: Node = new Node(graph.value)
-		for (neighbor <- graph.neighbors){
-			cloneNode.neighbors.::(cloneGraph(neighbor))
-		}
-		cloneNode
+
 	}
-}*/
+
 }

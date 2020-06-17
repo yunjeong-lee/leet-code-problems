@@ -104,6 +104,15 @@ import scala.util.Random
 			}
 		}
 
+		/** Get Int value from Some(val) of type Option[Int] and error from None
+		 * (relevant problem: 133) */
+
+		def get_exn(opt_value: Option[Node]): Node = {
+			opt_value match {
+				case Some(p) => p;
+				case None => throw new IllegalArgumentException("None is not possible")
+			}
+		}
 
 		/** Scalacheck examples */
 
@@ -119,6 +128,7 @@ import scala.util.Random
 }
 
 
+
 /** Definition of ListNode (relevant problems: 2, 24, 143) */
 
 class ListNode(_x: Int = 0, _next: ListNode = null) {
@@ -129,6 +139,15 @@ class ListNode(_x: Int = 0, _next: ListNode = null) {
 object ListNode {
 	def unapply(node: ListNode): Option[Int] = Some(node.x)
 }
+
+
+/** Definition of Node (relevant problem: 133) */
+
+class Node(var _value: Int) {
+	var value: Int = _value;
+	var neighbors: List[Node] = List()
+}
+
 
 /** Definition of a binary tree node (relevant problems: 95, 96) */
 

@@ -8,18 +8,26 @@ class Problem79_WordSearchTests extends Problem79_WordSearch {
 
 	@Test def `word search test`: Unit = {
 
-		val board: Array[Array[Char]] =
+		val board1: Array[Array[Char]] =
 			Array(
 				Array('A', 'B', 'C', 'E'),
 				Array('S', 'F', 'C', 'S'),
 				Array('A', 'D', 'E', 'E')
 			)
-		val word1: String = "ABCCED"
-		val word2: String = "SEE"
-		val word3: String = "ABCB"
+		val word11: String = "ABCCED"
+		val word12: String = "SEE"
+		val word13: String = "ABCB"
 
-		// To run after debugging..
-		assert(/*exist(board, word1) && exist(board, word2) && !exist(board, word3) */true)
+		val board2: Array[Array[Char]] =
+			Array(Array('A', 'A'))
+		val word21: String = "AAA"
+		val word22: String = "AA"
+
+		assert(exist(board1, word11)
+			&& exist(board1, word12)
+			&& !exist(board1, word13)
+			&& !exist(board2, word21)
+			&& exist(board2, word22))
 
 	}
 

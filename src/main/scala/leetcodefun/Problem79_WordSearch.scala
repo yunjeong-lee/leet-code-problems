@@ -1,5 +1,7 @@
 package leetcodefun
 
+import scala.util.control.Breaks
+
 class Problem79_WordSearch {
 
 	/**
@@ -33,23 +35,50 @@ class Problem79_WordSearch {
 	 *
 	 */
 
-	/*def exist(board: Array[Array[Char]], word: String): Boolean = {
+	def exist(board: Array[Array[Char]], word: String): Boolean = {
 
-		// 1. Find where the 1st character of the word is located in the board,
-		//    and collect them in a list
+		val ROWS: Int = board.length
+		val COLS: Int = board(0).length
 
-		val init_char: Char = word.charAt(0)
-		val init_ls: List[(Int, Int)] = Nil
+		def backtrack(row: Int, col: Int, word: String, index: Int): Boolean = {
 
-		for (i <- 0 until board.length - 1;
-				 j <- 0 until board.length - 1) {
-			while (board(i)(j) == init_char) {
-				init_ls.::(i, j)
+			// 1. Check the bottom case
+			if (index >= word.length) { true }
+
+			// 2. Check the boundaries
+			else if (row < 0 || row == ROWS || col < 0 || col == COLS
+				|| board(row)(col) != word.charAt(index)) { false }
+			else {
+				// 3. Explore the neighbors in DFS
+				// Mark the path before exploration
+				var res: Boolean = false
+				board(row)(col) = '#'
+
+				// Note: need to break out of the loop to prevent 'Memory Limit Exceeded'
+				val loop = new Breaks
+
+				val rowOffsets: Array[Int] = Array(0, 1, 0, -1)
+				val colOffsets: Array[Int] = Array(1, 0, -1, 0)
+				loop.breakable{
+					for (d <- 0 until 4) {
+						if (backtrack(row + rowOffsets(d), col + colOffsets(d),
+							word, index + 1)) { res = true }
+						if (res) { loop.break }
+					}
+				}
+
+				// 4. Clean up and return the result
+				board(row)(col) = word.charAt(index)
+				res
 			}
 		}
-		init_ls
 
-	}*/
+		for (r <- 0 until ROWS;
+				 c <- 0 until COLS) {
+			if (backtrack(r, c, word, 0)) { return true }
+		}
+		false
+	}
 
 
 }
